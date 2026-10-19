@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter sign-up form with success message</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: hsl(235, 18%, 26%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: hsl(234, 29%, 20%);
+    }
+
+    .card {
+      background: white;
+      border-radius: 36px;
+      overflow: hidden;
+      max-width: 928px;
+      width: 100%;
+      display: flex;
+      box-shadow: 0 15px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .content {
+      padding: 64px 40px 64px 64px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .content > p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .features {
+      list-style: none;
+      margin-bottom: 40px;
+    }
+
+    .features li {
+      margin-bottom: 12px;
+    }
+
+    .features label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    form > label {
+      font-size: 12px;
+      font-weight: 700;
+    }
+    input[type="email"] {
+      width: 100%;
+      padding: 16px 24px;
+      border: 1px solid hsl(231, 7%, 60%);
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: inherit;
+      outline: none;
+    }
+
+    button {
+      margin-top: 16px;
+      padding: 18px;
+      background: hsl(234, 29%, 20%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #FF6A3A, #FF527B);
+    }
+
+    .illustration {
+      width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #FF6A3A, #FF527B);
+    }
+
+    .illustration img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 0;
+        background: white;
+      }
+
+      .card {
+        flex-direction: column-reverse;
+        border-radius: 0;
+        max-width: 100%;
+        min-height: 100vh;
+        box-shadow: none;
+      }
+
+      .content {
+        padding: 40px 24px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .illustration {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="content">
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+      <ul class="features">
+        <li>
+          <label>
+            <input type="checkbox">
+            Product discovery and building what matters
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            Measuring to ensure updates are a success
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            And much more!
+          </label>
+        </li>
+      </ul>
+
+      <form>
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="email@company.com">
+        <button type="submit">Subscribe to monthly newsletter</button>
+      </form>
+    </div>
+
+    <div class="illustration">
+      <img src="image.png" alt="Illustration">
+    </div>
+  </div>
+
+</body>
+</html>
